@@ -8,7 +8,7 @@ const Button = ({ variant = 'default', disabled = false, children }) => (
 );
 
 Button.propTypes = {
-  variant: propTypes.oneOf(['default', 'primary', 'secondary']),
+  variant: propTypes.oneOf(['icon', 'default']),
   disabled: propTypes.bool,
   children: propTypes.node,
 };
