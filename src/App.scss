@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+  background-color: #2D3E4E;
+}
+
+.app {
+  &--header {
+    background-color: #2D3E4E;
+    height: 140px;
+    padding: 20px;
+    color: white;
+  }
+
+  &--title {
+    color: #FFF;
+    font-family: "Open Sans";
+    font-size: 60px;
+    font-size: clamp(60px, 2vw, 1.5rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 66px; /* 110% */
+    width: 89.6%;
+
+    position: absolute;
+    top: 127px;
+    left: 79px;
+  }
+
+  &--container {
+    padding: 0 53px;
+    margin: 22px 0;
+
+    &--line{
+      position: relative;
+      width: 100%;
+      height: 0px;
+      left: 0px;
+      top: 165px;
+      border: 1px solid #FFFFFF;
+    }
+  }
+
+  &--body {
+    background-color: #2D3E4E;
+    padding: 267px 85px 85px;
+    color: white;
+  }
+}
+
+.close-button {
+  position: absolute;
+  padding: 10px;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  right: 63px;
+  top: 50px;
+  gap: 0px
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.close-button:hover {
+  animation: spin 1s linear 0.25;
+}
+
