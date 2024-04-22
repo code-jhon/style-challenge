@@ -1,31 +1,34 @@
 .firmFactCard {
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-
-  .button {
-    // Common button styles
-    &.top-row {
-      justify-self: start;
-    }
-    &.bottom-row {
-      justify-self: end;
-    }
-  }
-  // Common styles
-}
-
-.firmFactCard:first-child {
+  display: grid;
+  place-items: center;
+  justify-content: center;
   width: 364px;
-  height: 322px;
+  height: 100%;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: inset 0 0 0 15px #07C06A;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    background: #FFF;
+  }
+
+  &:active {
+    background-color: #07C06A;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  
 }
 
-.default:hover {
-  background-color: green;
-}
+.disabled{
+  cursor: not-allowed;
+  
+  &:hover {
+    box-shadow: inset 0 0 0 15px #FFFFFF;
+    background: #FFF;
+  }
 
-.border {
-  border: 1px solid black;
-}
-
-.border:hover {
-  border-color: green;
+  &:active {
+    background-color: #FFFFFF;
+  }
 }

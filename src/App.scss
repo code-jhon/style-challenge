@@ -1,50 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 body {
   background-color: #2D3E4E;
 }
 
 .app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+
   &--header {
     height: 140px;
-    padding: 20px;
     color: white;
+    width: 100%;
   }
 
   &--title {
     color: #FFF;
-    font-family: "Open Sans";
-    font-size: 60px;
-    font-size: clamp(60px, 2vw, 1.5rem);
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-style: normal;
-    font-weight: 400;
+    font-variation-settings:'wdth' 100;
+    font-size: clamp(60px, 2vw, 1.5rem);
     line-height: 66px; /* 110% */
     width: 89.6%;
-
     position: absolute;
-    top: 127px;
+    top: 137px;
     left: 79px;
   }
 
-  &--container {
-    padding: 0 53px;
-    margin: 22px 0;
-
-    &--line{
-      position: relative;
-      width: 100%;
-      height: 0px;
-      left: 0px;
-      top: 165px;
-      border: 1px solid #FFFFFF;
-    }
+  &--sepparator{
+    position: relative;
+    width: 100%;
+    height: 0px;
+    left: 0px;
+    top: 146px;
+    border: 1px solid #FFFFFF;
   }
 
   &--body {
-    padding: 267px 85px 85px;
-    color: white;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: 1px solid #007bff;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.2s, border-color 0.2s;
+
+      &:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+    }
   }
 }
+
+
 
 .close-button {
   position: absolute;
@@ -55,6 +80,12 @@ body {
   right: 63px;
   top: 50px;
   gap: 0px
+}
+
+.firmFactCard:hover .button {
+  background: #07C06A;
+  color: #FFFFFF;
+  border: solid 1px #FFFFFF;
 }
 
 

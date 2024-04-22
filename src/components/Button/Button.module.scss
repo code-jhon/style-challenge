@@ -1,7 +1,44 @@
 .button {
+  display: grid;
+  grid-template-columns: auto 1fr;
   transition: background-color 0.3s, color 0.3s;
-  // Common button styles
+  border-radius: 70px;
+  background: #2D3E4E;
+  width: 310px;
+  max-width: 310px;
+  height: 70px;
+  justify-items: center;
+  align-items: center;
+
+  .buttonText {
+    color: #FFF;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:'wdth' 100;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 244px;
+  }
+
+  .buttonIcon{
+    margin: 24px 16px 22px 27px ;
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    background: #07C06A;
+    color: #FFFFFF;
+    border: solid 1px #FFFFFF;
+  }
 }
+
+
 
 .default {
   // Specific styles
@@ -13,4 +50,11 @@
 
 .disabled {
   // Styles for disabled state
+  background-color: #AAAAAA;
+
+  &:hover {
+    background: #AAAAAA;
+    color: #FFFFFF;
+    border: solid 1px #FFFFFF;
+  }
 }
